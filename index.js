@@ -4,7 +4,9 @@ const controllers = require('./controllers');
 const auth = require('./auth');
 const sockets = require('./sockets');
 
-app.use(express.static('../build'));
+const PORT = 8080;
+
+// app.use(express.static('../build'));
 
 app.use('/api/*', (req, res) => {
 	req.url = req.baseUrl.replace('/api', '');
@@ -18,8 +20,14 @@ auth(app);
 controllers(app);
 sockets(app);
 
-app.use('*', (req, res) => {
-	res.sendFile('index.html', { root: '../build' });
-});
+// app.use('*', (req, res) => {
+// 	res.sendFile('index.html', { root: '../build' });
+// });
 
-app.listen(8080);
+app.listen(PORT, (err) => {
+	if (err) {
+		console.log(`Error starting server: ${err}`);
+	} else {
+		console.log(`App listening on port ${PORT}`)
+	}
+});
