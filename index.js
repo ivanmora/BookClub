@@ -6,8 +6,6 @@ const sockets = require('./sockets');
 
 const PORT = 8080;
 
-// app.use(express.static('../build'));
-
 app.use('/api/*', (req, res) => {
 	req.url = req.baseUrl.replace('/api', '');
 	app.handle(req, res);
@@ -19,10 +17,6 @@ app.use(express.json());
 auth(app);
 controllers(app);
 sockets(app);
-
-// app.use('*', (req, res) => {
-// 	res.sendFile('index.html', { root: '../build' });
-// });
 
 app.listen(PORT, (err) => {
 	if (err) {
