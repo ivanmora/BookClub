@@ -1,4 +1,4 @@
-const { Book, Club, User, Vote, Selection } = require('../models');
+const { Book, Club, User, Vote, Selection } = require('../db/schemas');
 const errorHandler = require('./errorHandler');
 const { adminClubUser } = require('./middleware');
 

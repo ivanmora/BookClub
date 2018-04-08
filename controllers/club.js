@@ -1,4 +1,4 @@
-const { Club, Selection } = require('../models');
+const { Club, Selection } = require('../db/schemas');
 const errorHandler = require('./errorHandler');
 const { invitedClubUser, authedUser } = require('./middleware');
 

@@ -1,4 +1,4 @@
-const { User, Club, Invitation } = require('../models');
+const { User, Club, Invitation } = require('../db/schemas');
 const errorHandler = require('./errorHandler');
 const bcrypt = require('bcrypt');
 const uuidv1 = require('uuid/v1');

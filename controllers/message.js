@@ -1,4 +1,4 @@
-const { Message } = require('../models');
+const { Message } = require('../db/schemas');
 const { activeClubUser } = require('./middleware');
 const errorHandler = require('./errorHandler');
 const { sockets } = require('../sockets');

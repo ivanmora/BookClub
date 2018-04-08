@@ -1,4 +1,4 @@
-const { User, Club, Membership, Book, Selection, Vote, Invitation, Message } = require('../models');
+const { User, Club, Membership, Book, Selection, Vote, Invitation, Message } = require('./schemas');
 
 Promise.all(
 	[User, Club, Membership, Book, Selection, Vote, Invitation, Message].map((Model) =>

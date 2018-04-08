@@ -1,4 +1,4 @@
-const { Club } = require('../models');
+const { Club } = require('../db/schemas');
 const unauth = (res) => res.status(401).send();
 
 const userRole = (roles) => async (req, res, next) => {
